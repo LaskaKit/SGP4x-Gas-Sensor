@@ -16,9 +16,9 @@ On the TOP side, here is solder bridge what connects pull-up resistors on power 
 ![Assembled module - bottom view](https://github.com/LaskaKit/SGP4x-Gas-Sensor/blob/main/img/3-10.jpg)
 
 ## SGP41
-Minimum voltage is 1.7V
-The maximum is 3.6V.
-Consumption is 34uA in idle mode, during measurement the average consumption is 3mA
+Minimum voltage is 1.7V</br>
+The maximum is 3.6V.</br>
+Consumption is 34uA in idle mode, during measurement the average consumption is 3mA</br>
 
 Supported Arduino library </br>
 [https://github.com/Sensirion/arduino-i2c-sgp41](https://github.com/Sensirion/arduino-i2c-sgp41)</br>
