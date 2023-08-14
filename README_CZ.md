@@ -15,7 +15,7 @@ Na přední straně je pájecí most, který připojuje pull-up rezistory na I2C
 
 ![Osazený modul - zadní strana](https://github.com/LaskaKit/SGP4x-Gas-Sensor/blob/main/img/3-10.jpg)
 
-## BMP280
+## SGP41
 Minimální napětí je 1.7V</br>
 Maximální pak 3.6V.</br>
 Spotřeba je 34uA v idle režimu, během měření je průměrná spotřeba 3mA</br>
