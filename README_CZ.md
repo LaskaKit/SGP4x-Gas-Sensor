@@ -1,29 +1,24 @@
-# Modul pro měření atmosférického tlaku a teploty s BMP280
-Přidali jsme další modul s univerzálním a bezpečným konektorem uŠup. Potřebuješ přidat měření atmosférického tlaku do své meteostanice? Pak tu máme čidlo BMP280. Přesné a velmi úsporné a navíc s měřením teploty.
+# Modul pro měření kvality ovzduší s SGP41
+Hlídej vzduch, který dýcháš. Díky našemu modulu s SGP41, čipem pro vyhodnocení kvality vzduchu na základě VOC a NOx, můžeš měřit a online zaznamenávat naměřená data a na jejich základě spínat akční prvek typu ventilátor.
 
-![Osazený modul](https://github.com/LaskaKit/BMP280-Sensor/blob/main/img/4.jpg)
+![Osazený modul](https://github.com/LaskaKit/SGP4x-Gas-Sensor/blob/main/img/1-11.jpg)
 
-Čidlo BMP280 má velmi dobrou absolutní přesnost +- 1 hPa, rozsah měření 300 - 1100 hPa a jeho spotřeba je pouhých 2,7 uA (při vzorkování 1x za sekundu).
+Čip SGP41 od firmy Sensirion patří mezi ty nejkvalitnější na trhu, my navrhli a vyrobili jednoduchý modul, který můžeš připojit do jakékoliv desky a nemusí to být zrovna náš vývojový kit s [ESP32-C3 LPkit](https://www.laskakit.cz/laskkit-esp-12-board/?variantId=10482), jednoduše [programovatelný kit s ESP32](https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481) nebo [kit s ESP32 a LAN](https://www.laskakit.cz/laskakit-esplan-esp32-lan8720a-max485-poe/?variantId=12167).
 
-Modul s BMP280 má dva průchozí uŠup konektory a tak jeden můžeš připojit do vývojové desky, do druhého připojit jeden z našich dalších modulů - [SHT40 (teplota/vlhkost)](https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/), [BME280 (teplota, vlhkost, atmosférický tlak)](https://www.laskakit.cz/arduino-senzor-tlaku--teploty-a-vlhkosti-bme280/), [SCD41 (CO2, teplota, vlhkost)](https://www.laskakit.cz/laskakit-scd41-senzor-co2--teploty-a-vlhkosti-vzduchu/).
+Modul s SGP41 má dva průchozí uŠup konektory a tak jeden můžeš připojit do vývojové desky, do druhého připojit jeden z našich dalších modulů - [SHT40 (teplota/vlhkost)](https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/), [BME280 (teplota, vlhkost, atmosférický tlak)](https://www.laskakit.cz/arduino-senzor-tlaku--teploty-a-vlhkosti-bme280/), [SCD41 (CO2, teplota, vlhkost)](https://www.laskakit.cz/laskakit-scd41-senzor-co2--teploty-a-vlhkosti-vzduchu/).
 
 Na modul můžeš samozřejmě zapájet hřebínek a zapojit kamkoliv - [Arduino](https://www.laskakit.cz/arduino-2/), Raspberry Pi, [Rock Pi](https://www.laskakit.cz/radxa-rock-pi-4-b--b4e32-4gb-ram-32gb-emmc/) a další. 
 
-Když ti  záleží na velikosti a chceš co nejmenší modul, stačí desku odlomit a zapájet 2x2 hřebínek (nebo kabel).
+Adresa čidla je fixní a čidlo tak najdeš na adrese 0x59.
 
-BMP280 na modulu má vyvedenou I2C sběrnici a tak je jednoduše připojitelný kamkoliv. 
+Na přední straně je pájecí most, který připojuje pull-up rezistory na I2C sběrnici. 
 
-Na zadní straně je pájecí most, kde si můžeš vybrat adresu a zapojit tak na jednu I2C sběrnici rovnou dvě BMP280 čidla.
-
-![Osazený modul - zadní strana](https://github.com/LaskaKit/BMP280-Sensor/blob/main/img/2.jpg)
+![Osazený modul - zadní strana](https://github.com/LaskaKit/SGP4x-Gas-Sensor/blob/main/img/3-10.jpg)
 
 ## BMP280
-Minimální napětí je 1.71V</br>
+Minimální napětí je 1.7V</br>
 Maximální pak 3.6V.</br>
-Spotřeba je 2.7uA (@1Hz) - hodí se tak na bateriově napájené projekty, ve spánku pak 0.1 uA.</br>
-Rozlišení teplototního čidla je 0.01 °C, rozsah měření pak -40 až 85 °C.</br>
-Rozlišení tlaku je 1hPa, rozsah 300 - 1100 hPa. </br>
+Spotřeba je 34uA v idle režimu, během měření je průměrná spotřeba 3mA</br>
 
 Mezi podporované knihovny patří </br>
-https://github.com/adafruit/Adafruit_BMP280_Library</br>
-https://github.com/MartinL1/BMP280_DEV</br>
+[https://github.com/Sensirion/arduino-i2c-sgp41](https://github.com/Sensirion/arduino-i2c-sgp41)</br>
