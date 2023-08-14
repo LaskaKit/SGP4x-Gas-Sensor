@@ -22,3 +22,5 @@ Consumption is 34uA in idle mode, during measurement the average consumption is 
 
 Supported Arduino library </br>
 [https://github.com/Sensirion/arduino-i2c-sgp41](https://github.com/Sensirion/arduino-i2c-sgp41)</br>
+We wrote a few example codes where we are using the SGP41</br>
+[https://github.com/LaskaKit/SGP4x-Gas-Sensor/tree/main/SW](https://github.com/LaskaKit/SGP4x-Gas-Sensor/tree/main/SW)</br>
