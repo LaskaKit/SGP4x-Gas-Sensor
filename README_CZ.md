@@ -22,3 +22,5 @@ Spotřeba je 34uA v idle režimu, během měření je průměrná spotřeba 3mA<
 
 Mezi podporované knihovny patří </br>
 [https://github.com/Sensirion/arduino-i2c-sgp41](https://github.com/Sensirion/arduino-i2c-sgp41)</br>
+Vzorové kódy s SGP41</br>
+[https://github.com/LaskaKit/SGP4x-Gas-Sensor/tree/main/SW](https://github.com/LaskaKit/SGP4x-Gas-Sensor/tree/main/SW)</br>
